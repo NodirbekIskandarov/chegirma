@@ -1,9 +1,10 @@
+import { Home } from "./pages";
 
 
 function App() {
   return (
     <div>
-      chegirma
+      <Home/>
     </div>
   );
 }
