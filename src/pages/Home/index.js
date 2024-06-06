@@ -1,10 +1,11 @@
+import { Stack } from "@mui/material";
 import React from "react";
 
 function Home () {
     return (
-        <div>
-            
-        </div>
+        <Stack>
+            home
+        </Stack>
     )
 }
 export default Home
