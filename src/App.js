@@ -1,11 +1,14 @@
-import { Home } from "./pages";
+import { Route, Routes } from "react-router-dom";
+import { Home, Main } from "./pages";
 
 
 function App() {
   return (
-    <div>
-      <Home/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Main/>}>
+        <Route index element={<Home/>}/>
+      </Route>
+    </Routes>
   );
 }
 
