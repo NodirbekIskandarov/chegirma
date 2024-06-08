@@ -17,7 +17,8 @@ function Footer() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            padding: "20px 0"
+            padding: "20px 0",
+            marginTop: "30px"
         }}>
             <Container>
                 <Box sx={{

@@ -1,10 +1,14 @@
 import { Stack } from "@mui/material";
 import React from "react";
+import { AboutUs, BrandsComponent, Carousel, ProductsComponent } from "../../components";
 
 function Home () {
     return (
         <Stack>
-            home
+            <Carousel/>
+            <BrandsComponent/>
+            <ProductsComponent/>
+            <AboutUs/>
         </Stack>
     )
 }
