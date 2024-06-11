@@ -1,7 +1,6 @@
-import { Box, Button, Rating, Stack } from "@mui/material";
+import { Box, Rating, Stack } from "@mui/material";
 import React from "react";
 import { Container, GlobalParagraph } from "../../global_styles/styles";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import product from '../../media/images/product.png'
 import EastIcon from '@mui/icons-material/East';
@@ -12,21 +11,10 @@ import callicon from '../../media/images/callicon.png'
 function ProductsComponent () {
     const [value, setValue] = React.useState(2);
     return (
-        <Stack>
+        <Stack sx={{
+            margin: "20px 0"
+        }}>
             <Container>
-                <Box sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }}>
-                    <GlobalParagraph fontSize="36px" fontWeight="600">Title</GlobalParagraph>
-                    <Button sx={{
-                        color: "rgba(255, 1, 0, 1)",
-                        fontSize: "24px",
-                        fontWeight: "400"
-                    }}>Barchasi <KeyboardArrowRightIcon/></Button>
-                </Box>
                 <Box sx={{
                     width: "100%",
                     display: "flex",

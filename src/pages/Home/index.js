@@ -1,12 +1,12 @@
 import { Stack } from "@mui/material";
 import React from "react";
-import { AboutUs, BrandsComponent, Carousel, ProductsComponent } from "../../components";
+import { AboutUs, BrandsComponent, ProductsComponent, ProductsTitle } from "../../components";
 
 function Home () {
     return (
         <Stack>
-            <Carousel/>
             <BrandsComponent/>
+            <ProductsTitle/>
             <ProductsComponent/>
             <AboutUs/>
         </Stack>

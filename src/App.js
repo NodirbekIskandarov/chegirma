@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, Main } from "./pages";
+import { AllProducts, Home, Main } from "./pages";
 
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Main/>}>
         <Route index element={<Home/>}/>
+        <Route path="all_products" element={<AllProducts/>}/>
       </Route>
     </Routes>
   );
