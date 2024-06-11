@@ -119,7 +119,9 @@ function Category() {
                                 }}>
                                     <h3 style={{
                                         margin: "0",
-                                        padding: "0"
+                                        padding: "0",
+                                        fontSize: "18px",
+                                        fontWeight: "400"
                                     }}>{item.main_menu}</h3>
                                 </Box>
                             )

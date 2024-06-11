@@ -7,7 +7,9 @@ import samsung from '../../media/images/samsung.png'
 import artel from '../../media/images/artel.png'
 function BrandsComponent () {
     return (
-        <Stack>
+        <Stack sx={{
+            marginTop: "30px"
+        }}>
             <Container>
                 <Box sx={{
                     width: "100%",
