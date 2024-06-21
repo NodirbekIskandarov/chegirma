@@ -1,4 +1,4 @@
-import { Box, Checkbox, Collapse, Divider, FormControlLabel, FormGroup, List, ListItemButton, ListItemText, Slider, Stack, TextField, Typography } from "@mui/material";
+import { Box, Checkbox, Collapse, Divider, FormControlLabel, FormGroup, List, ListItemButton, ListItemText, Stack, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Container, GlobalParagraph } from "../../global_styles/styles";
 import { ProductsComponent } from "../../components";
@@ -7,7 +7,6 @@ import { ExpandLess, ExpandMore } from "@mui/icons-material";
 function Filter() {
     const [openPrice, setOpenPrice] = useState(true);
     const [opensell, setOpensell] = useState(true);
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
     const handleClickPrice = () => {
         setOpenPrice(!openPrice);
     };

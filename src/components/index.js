@@ -11,3 +11,11 @@ export { default as AboutUs } from './AboutUs'
 
 //all products
 export { default as AllProductsComponent } from './AllProductsComponent'
+
+//detail page
+export { default as AboutProduct } from './AboutProduct'
+export { default as DetailCarousel } from './DetailCarousel'
+export { default as ProductDescription } from './ProductDescription'
+export { default as DeatilComments } from './DetailComments'
+export { default as DetailWriteComments } from './DetailWriteComments' 
+export { default as RecommendProducts } from './RecommendProducts'
