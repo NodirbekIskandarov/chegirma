@@ -97,8 +97,7 @@ function Category() {
                 <Box sx={{
                     width: "100%",
                     display: "flex",
-                    justifyContent: "space-between",
-                    
+                    justifyContent: "space-between"
                 }}>
                     <Box sx={{
                         width: "25%",

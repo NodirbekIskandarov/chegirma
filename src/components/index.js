@@ -19,3 +19,9 @@ export { default as ProductDescription } from './ProductDescription'
 export { default as DeatilComments } from './DetailComments'
 export { default as DetailWriteComments } from './DetailWriteComments' 
 export { default as RecommendProducts } from './RecommendProducts'
+
+//controlpanel page
+export { default as ControlComponent } from './ControlComponent'
+export { default as OrdersComponent } from './OrdersComponent'
+export { default as ChangePasswordComponent } from './ChangePasswordComponent'  
+export { default as AccountDetailsComponent } from './AccountDetailsComponent'
