@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     @media (max-width: 1440px) {
         width: 100%;
     }
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #F2F3F5;
 `
 
 export const Container = styled.div`
