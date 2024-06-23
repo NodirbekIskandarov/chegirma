@@ -75,7 +75,7 @@ function Category() {
         },
     ]
 
-    const [bgColor, setBgColor] = useState(false)
+    const [bgColor, setBgColor] = useState(true)
     const [clickedIndex, setClickedIndex] = useState(0)
     function clickedFunc(props) {
         setClickedIndex(props)
