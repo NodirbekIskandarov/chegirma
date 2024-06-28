@@ -2,14 +2,13 @@ import { Box, Rating, Stack } from "@mui/material";
 import React from "react";
 import { Container, GlobalParagraph } from "../../global_styles/styles";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import product from "../../media/images/product.png";
 import EastIcon from "@mui/icons-material/East";
 import { Link, useNavigate } from "react-router-dom";
 import { ProductCallButton, ProductSendButton } from "./styles";
 import MailIcon from "@mui/icons-material/Mail";
 import callicon from "../../media/images/callicon.png";
 function ProductsComponent(data) {
-  const [value, setValue] = React.useState(2);
+  const value=2;
   const navigate = useNavigate();
   return (
     <Stack

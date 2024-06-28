@@ -1,6 +1,5 @@
 import { Box, Button, FormControl, FormGroup, Stack, TextField } from "@mui/material"
 import { GlobalParagraph } from "../../global_styles/styles"
-import { InputComponent } from "../../pages/SignUp/style"
 
 function AccountDetailsComponent () {
     return (
