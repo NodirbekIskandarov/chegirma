@@ -9,8 +9,8 @@ export const ProductSendButton = styled.button`
     color: white;
     border: none;
     border-radius: 10px;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
