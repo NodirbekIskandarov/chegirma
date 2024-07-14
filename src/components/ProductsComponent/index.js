@@ -11,9 +11,9 @@ import callicon from "../../media/images/callicon.png";
 function ProductsComponent({loading, products}) {
   const value = 2;
   const navigate = useNavigate();
-  function handleClickFunc (props) {
+  function handleClickFunc (props) { //funcsiya ishlamayapti
     navigate(`/detail/${props}`)
-    console.log("nimadir")
+    console.log("nimadir") 
   }
 
   return (
