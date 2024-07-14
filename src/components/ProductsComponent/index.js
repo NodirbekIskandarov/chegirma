@@ -7,9 +7,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { ProductCallButton, ProductSendButton } from "./styles";
 import MailIcon from "@mui/icons-material/Mail";
 import callicon from "../../media/images/callicon.png";
-function ProductsComponent(data) {
-  const value=2;
+
+function ProductsComponent({loading, products}) {
+  const value = 2;
   const navigate = useNavigate();
+  function handleClickFunc (props) {
+    navigate(`/detail/${props}`)
+    console.log("nimadir")
+  }
+
   return (
     <Stack
       sx={{
@@ -21,12 +27,15 @@ function ProductsComponent(data) {
           sx={{
             width: "100%",
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "center",
           }}
         >
-          {data.data &&
-            data.data.slice(0, 4).map((item, index) => {
+          {loading ? (
+            <span>loading</span>
+          ) : (
+            products.map((item, index) => {
               return (
                 <Box
                   key={index}
@@ -36,8 +45,9 @@ function ProductsComponent(data) {
                     padding: "20px",
                     borderRadius: "10px",
                     cursor: "pointer",
+                    marginBottom: "20px"
                   }}
-                  onclick={() => navigate(`/detail`)}
+                  onclick={() => handleClickFunc(item.uuid)}
                 >
                   <img src={item.image} alt="mahsulot" width="100%" />
                   <Box
@@ -98,7 +108,7 @@ function ProductsComponent(data) {
                         fontWeight: "500",
                       }}
                     >
-                      Apple.uz
+                      {item.seller_name}
                     </Link>
                   </Box>
                   <Box
@@ -111,7 +121,7 @@ function ProductsComponent(data) {
                   >
                     <Rating name="read-only" value={value} readOnly />
                     <GlobalParagraph fontSize="14px" fontWeight="400">
-                      2ta sharh
+                      {item.comments_count}ta sharh
                     </GlobalParagraph>
                   </Box>
                   <Box
@@ -133,7 +143,8 @@ function ProductsComponent(data) {
                   </Box>
                 </Box>
               );
-            })}
+            })
+          )}
         </Box>
       </Container>
     </Stack>

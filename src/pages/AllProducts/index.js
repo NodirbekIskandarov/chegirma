@@ -1,9 +1,18 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
-import { AllProductsComponent } from "../../components";
+import React, { useEffect } from "react";
+import { ProductsComponent } from "../../components";
 import { Container, GlobalParagraph } from "../../global_styles/styles";
+import { useDispatch, useSelector } from "react-redux";
+import { getHomeProducts, getHomeProductsData, getHomeProductsLoading } from "../../redux/slices/homeSlicer";
 
 function AllProducts () {
+    const loading = useSelector(getHomeProductsLoading);
+    const products = useSelector(getHomeProductsData);
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(getHomeProducts());
+    }, [dispatch]);
+  
     return (
         <Stack>
             <Container>
@@ -16,7 +25,7 @@ function AllProducts () {
                     <GlobalParagraph fontSize="36px" fontWeight="600">Title</GlobalParagraph>
                 </Box>
             </Container>
-            <AllProductsComponent/>
+            {products && <ProductsComponent loading={loading} products={products} />}
         </Stack>
     )
 }

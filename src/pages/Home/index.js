@@ -1,37 +1,22 @@
 import { Stack } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { AboutUs, BrandsComponent, ProductsComponent, ProductsTitle } from "../../components";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getHomeProducts, getHomeProductsData, getHomeProductsLoading } from "../../redux/slices/homeSlicer";
 
 function Home () {
-
-    const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  const loading = useSelector(getHomeProductsLoading);
+  const products = useSelector(getHomeProductsData);
+  const dispatch = useDispatch();
   useEffect(() => {
-    // Define the async function to fetch data
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://192.168.0.126:8000/api/v1/home/products/');
-        setData(response.data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
+    dispatch(getHomeProducts());
+  }, [dispatch]);
 
-    fetchData();
-  }, []); 
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
     return (
         <Stack>
             <BrandsComponent/>
             <ProductsTitle/>
-            <ProductsComponent data={data.results}/>
+            {products && <ProductsComponent loading={loading} products={products.slice(0, 4)} />}
             <AboutUs/>
         </Stack>
     )
