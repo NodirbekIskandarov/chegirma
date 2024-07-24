@@ -14,6 +14,7 @@ import { InputComponent, LineComponent } from "./style";
 import { Link } from "react-router-dom";
 
 function SignUp() {
+  
   return (
     <Stack>
       <Container>

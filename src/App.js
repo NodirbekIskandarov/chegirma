@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { AllProducts, Compare, ControlPanel, Detail, Favourites, Filter, Home, Main, SignUp } from "./pages";
+import { AllProducts, Compare, ControlPanel, Detail, Favourites, Filter, Home, Login, Main, SignUp } from "./pages";
 
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
         <Route path="detail" element={<Detail/>}/>
         <Route path="compare" element={<Compare/>}/>
         <Route path="favourites" element={<Favourites/>}/>
-        <Route path="sign_up" element={<SignUp/>}/>
+        <Route path="sign-up" element={<SignUp/>}/>
+        <Route path="login" element={<Login/>}/>
         <Route path="control_panel" element={<ControlPanel/>}/>
       </Route>
     </Routes>

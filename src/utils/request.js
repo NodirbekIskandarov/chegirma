@@ -11,3 +11,18 @@ export const getRequest = (url) => {
       });
   });
 }
+
+export const postRequest = (url, data) => {
+  return new Promise((resolve, reject) => {
+      axios.post(
+          url,
+          data
+      ).then((response) => {
+          resolve(response)
+      })
+      .catch((error) => {
+          console.log(error)
+          reject(error)
+      });
+  });
+}
