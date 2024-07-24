@@ -11,6 +11,7 @@ import favourites from '../../media/images/yoqtirgan.png'
 import Menu from "../Menu";
 import { Link } from "react-router-dom";
 import { ButtonCategory } from "./styles";
+import Category from "../Category";
 function Header () {
     const [categoryBtn, setCategoryBtn] = useState(false)
     function CategoryBtnFunc () {
@@ -40,6 +41,9 @@ function Header () {
                             logo
                         </Link>
                         <ButtonCategory onClick={() => CategoryBtnFunc()}>{categoryBtn ? (<CloseIcon/>) : (<MenuIcon/>)} Kategoriya</ButtonCategory>
+                        <Box sx={{
+                            display: categoryBtn ? "block" : "none"
+                        }}><Category/></Box>
                     </Box>
 
                     <Box width="75%">
